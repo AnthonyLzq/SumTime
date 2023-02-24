@@ -1,0 +1,49 @@
+{
+  "name": "sum-dates",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^2.0.15"
+  },
+  "description": "Simple UI to sum hours, minutes and seconds",
+  "main": "index.js",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^2.8.4",
+    "prettier-plugin-astro": "^0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyLzq/sum-time.git"
+  },
+  "keywords": [
+    "sum",
+    "dates",
+    "hours",
+    "minutes",
+    "seconds"
+  ],
+  "author": "AnthonyLzq <sluzquinosa@uni.pe>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnthonyLzq/sum-time/issues"
+  },
+  "homepage": "https://github.com/AnthonyLzq/sum-time#readme"
+}

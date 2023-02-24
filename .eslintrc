@@ -1,0 +1,73 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "extends": [
+    "standard-with-typescript",
+    "prettier",
+    "plugin:astro/recommended",
+    "eslint-config-prettier"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "no-console": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "avoid",
+        "bracketSpacing": true,
+        "htmlWhitespaceSensitivity": "css",
+        "insertPragma": false,
+        "jsxBracketSameLine": false,
+        "jsxSingleQuote": true,
+        "printWidth": 80,
+        "proseWrap": "preserve",
+        "quoteProps": "as-needed",
+        "requirePragma": false,
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "none",
+        "useTabs": false,
+        "vueIndentScriptAndStyle": false
+      }
+    ]
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true,
+    "React": true,
+    "JSX": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      },
+      "rules": {}
+    }
+  ]
+}
