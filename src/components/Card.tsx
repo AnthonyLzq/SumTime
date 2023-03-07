@@ -56,7 +56,7 @@ const Card: FC<CardProps> = props => {
         <input
           name='hours'
           type='number'
-          max={24}
+          max={23}
           min={0}
           value={state.hours}
           onChange={handleInputChange}

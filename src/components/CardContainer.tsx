@@ -10,19 +10,20 @@ const defaultTime: Time = {
   seconds: 0,
   index: 0
 }
+const initialState = [
+  {
+    ...defaultTime,
+    index: 0
+  },
+  {
+    ...defaultTime,
+    index: 1
+  }
+]
 
 const CardContainer = () => {
   const [numberOfCards, setNumberOfCards] = useState(2)
-  const [times, setTimes] = useState([
-    {
-      ...defaultTime,
-      index: 0
-    },
-    {
-      ...defaultTime,
-      index: 1
-    }
-  ])
+  const [times, setTimes] = useState(initialState)
   const [totalSeconds, setTotalSeconds] = useState<number | null>(null)
   const days =
     typeof totalSeconds === 'number'
@@ -101,10 +102,14 @@ const CardContainer = () => {
       </div>
       {totalSeconds ? (
         <div className='result'>
-          <p>
-            Result: {days} days, {hours} hours, {minutes} minutes, {seconds}{' '}
-            seconds
-          </p>
+          Result:{' '}
+          <code>
+            {days && days > 0 ? `${days}d, ` : ''}
+            {hours?.toString().padStart(2, '0')}:
+            {minutes?.toString().padStart(2, '0')}:
+            {seconds?.toString().padStart(2, '0')}
+          </code>
+          .
         </div>
       ) : null}
     </>
